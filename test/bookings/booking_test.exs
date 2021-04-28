@@ -3,8 +3,6 @@ defmodule Flightex.Bookings.BookingTest do
 
   alias Flightex.Bookings.Booking
 
-  import Flightex.Factory
-
   describe "build/4" do
     test "when all params are valid, returns an booking" do
       response =

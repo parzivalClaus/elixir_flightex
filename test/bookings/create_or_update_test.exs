@@ -1,7 +1,6 @@
 defmodule Flightex.Bookings.CreateOrUpdateTest do
   use ExUnit.Case
 
-  alias Flightex.Bookings.Agent, as: BookingAgent
   alias Flightex.Bookings.CreateOrUpdate
   alias Flightex.Users.Agent, as: UserAgent
 
@@ -26,7 +25,7 @@ defmodule Flightex.Bookings.CreateOrUpdateTest do
       assert {:ok, _uuid} = response
     end
 
-    test "when there is no user with given id, returns an error", %{id_usuario: id_usuario} do
+    test "when there is no user with given id, returns an error" do
       params = build(:booking, id_usuario: nil)
 
       response = CreateOrUpdate.call(params)

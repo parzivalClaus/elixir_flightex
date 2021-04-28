@@ -2,7 +2,6 @@ defmodule Flight.Bookings.AgentTest do
   use ExUnit.Case
 
   alias Flightex.Bookings.Agent, as: BookingAgent
-  alias Flightex.Bookings.Booking
 
   import Flightex.Factory
 
