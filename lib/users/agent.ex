@@ -3,8 +3,8 @@ defmodule Flightex.Users.Agent do
 
   use Agent
 
-  def start_link(_initial_state) do
-    Agent.start_link(fn -> %{} end, name: __MODULE__)
+  def start_link(initial_state \\ %{}) do
+    Agent.start_link(fn -> initial_state end, name: __MODULE__)
   end
 
   def save(%User{} = user) do
